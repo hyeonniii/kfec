@@ -1,0 +1,108 @@
+/* 공통 스타일 */
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #f9f9f9;
+    margin: 0;
+    font-family: "42dot Sans", Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+  
+  /* 사이드바 스타일 */
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+  }
+  
+  /* 사이드바 링크 스타일 */
+  .sidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* 마우스 오버 효과 */
+  .sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* 본문 내용 스타일 */
+  .content {
+    margin-left: 200px;
+    padding-left: 20px;
+    margin-right: 20px;
+  }
+  h2 {
+    color: #004D40; /* 짙은 teal 계열로 변경 */
+    background-color: #ECEFF1; /* 밝은 회색 (가독성 향상) */
+    padding: 15px 20px; /* 내부 여백 확장 */
+    display: block; /* 전체 너비 적용 */
+    font-weight: bold; /* 글씨 강조 */
+}
+  /* 푸터 스타일 */
+  footer {
+    margin-left: 200px;
+    text-align: center;
+    padding: 3px;
+    background-color: teal;
+    color: white;
+  }
+
+  /* 사이드바 언어 선택 버튼 스타일 */
+.lang-switch {
+    text-align: center;
+    padding: 10px 0; /* 위아래 여백 */
+  }
+  
+  .lang-switch button {
+    background: none;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: transform 0.2s;
+    color: white;
+  }
+  
+  .lang-switch button:hover {
+    transform: scale(1.2); /* 마우스 오버 시 확대 */
+  }
+
+  @media screen and (max-width: 768px) {
+    .sidenav {
+      width: 150px; /* 모바일에서 폭 줄이기 */
+    }
+  
+    .content {
+      margin-left: 150px; /* 본문도 조정 */
+    }
+  
+    footer {
+      margin-left: 150px;
+    }
+  }
+  
+  /* 📌 📱 더 작은 모바일 화면 (480px 이하) */
+  @media screen and (max-width: 480px) {
+    .sidenav {
+      width: 120px; /* 더 작은 화면에서는 더 줄이기 */
+    }
+  
+    .content {
+      margin-left: 120px;
+    }
+  
+    footer {
+      margin-left: 120px;
+    }
+  }
