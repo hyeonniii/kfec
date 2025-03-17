@@ -9,6 +9,16 @@
     font-family: "42dot Sans", Arial, Helvetica, sans-serif;
     font-style: normal;
 }
+.content-box {
+  max-width: 1000px; /* 박스의 최대 너비 설정 */
+  width: 90%; /* 반응형을 위해 기본 너비 설정 */
+  margin: 50px auto; /* 가운데 정렬 (상하 50px, 좌우 자동) */
+  padding: 20px; /* 안쪽 여백 */
+  background: white; /* 배경색 (필요하면 변경 가능) */
+  border-radius: 10px; /* 모서리 둥글게 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
   
   /* 사이드바 스타일 */
   .sidenav {
@@ -39,10 +49,12 @@
   /* 본문 내용 스타일 */
   .content {
     margin-left: 200px;
-    padding-left: 20px;
-    margin-right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+
   }
   h2 {
+    text-align: center;
     color: #004D40; /* 짙은 teal 계열로 변경 */
     background-color: #ECEFF1; /* 밝은 회색 (가독성 향상) */
     padding: 15px 20px; /* 내부 여백 확장 */
@@ -80,22 +92,24 @@
 
   @media screen and (max-width: 768px) {
     .sidenav {
-      width: 150px; /* 모바일에서 폭 줄이기 */
+      width: 140px; /* 모바일에서 폭 줄이기 */
     }
   
     .content {
       margin-left: 150px; /* 본문도 조정 */
+      padding: 7px;
     }
   
     footer {
-      margin-left: 150px;
+      margin-left: 140px;
     }
+    
   }
   
   /* 📌 📱 더 작은 모바일 화면 (480px 이하) */
   @media screen and (max-width: 480px) {
     .sidenav {
-      width: 120px; /* 더 작은 화면에서는 더 줄이기 */
+      width: 110px; /* 더 작은 화면에서는 더 줄이기 */
     }
   
     .content {
@@ -103,6 +117,6 @@
     }
   
     footer {
-      margin-left: 120px;
+      margin-left: 100px;
     }
   }
