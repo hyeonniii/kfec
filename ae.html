@@ -10,7 +10,13 @@
 <link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  <div id="header"></div>
+  <script>
+    // JavaScript로 헤더 파일 로드
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+  </script>
 
 <div id="sidenav" class="sidenav"></div>
 <script>
@@ -23,7 +29,7 @@
       let links = document.querySelectorAll(".sidenav a");
       links.forEach(link => {
         if (link.href === window.location.href) {
-          link.style.color = "teal";  // 선택된 링크 강조
+          link.style.color = "#2755a5";  // 선택된 링크 강조
           link.style.fontWeight = "bold"; 
         }
       });
@@ -32,12 +38,38 @@
   
 
 <div class="content">
-  <h2>Areas of Expertise</h2>
-  <p>저를소개합니당ㅋ</p>
-  <p>스위스는 멋진 곳이에요.. 또 가고 싶답니다. 또 갈 수 있게 아빠에게 일거리를 많이 주십쇼</p>
-<img src="img3.jpg" alt="aboutpic" style="width:100%;max-width:600px;">
+  <div class="box">
+  <h3>🔬 전문가 의견 분야</h3>
+  <ul> 
+    <li><b>화재</b> : 화재현장(발화지점, 발화원, 가연물), 증거물(각종 스위치, 발열기구, 기계, 전기 및 가스 기기/기구) 분석과 감정서  </li>
+    <li><b>폭발</b> : 공간 및 기기 폭발, 물리적 폭발 변형, 가스폭발 관련 분석 및 감정서</li>
+    <li><b>안전</b> : 현장조사(사고 원인), 기계/전기/가스 안전사고 관련 증거물 분석 및 감정서</li>
+    <li><b>흔/흔적</b>: 공구/도구/범구에 대한 물리적 해석</li>
+    <li>위 분야와 관련된 전문보고서 분석 및 평가</li>
+    <li>위 분야와 관련된 법정 출석 전문가 증언</li>
+  </ul>
 </div>
-
+<div class="box">
+<h3>🧾 컨설팅</h3>
+  <ul> 
+    <li>위 분야와 관련된 전문보고서 분석 및 평가  </li>
+    <li>위 분야와 관련된 법정 출석 전문가 증언</li>
+    <li>법과학, 법공학의 원리와 이용 방법</li>
+    <li>전문가 증언의 대응 및 조언</li>
+    <li>법적 증거의 연계 시스템 조언    </li>
+    <li>법과학, 법공학 문제에 관한 정부 & 공공의 정책 발전을 위한 제언</li>
+    <li>법과학, 법공학분야의 연구</li>
+    <li>실험실 관리 및 품질 보증  </li>
+  </ul></div>
+  <div class="box">
+  <h3>📝 심사, 평가, 교육</h3>
+  <ul> 
+    <li>국가연구사업 법과학/법공학분야 심사, 평가  </li>
+    <li>화재, 안전과 관련한 연구사업</li>
+    <li>Kolas, Koica 등 평가사업 </li>
+  </ul>
+</div>
+</div>
 <div id="footer"></div>
 <script>
   fetch('footer.html')

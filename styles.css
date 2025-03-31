@@ -10,7 +10,7 @@
     font-style: normal;
 }
 .content-box {
-  max-width: 1000px; /* 박스의 최대 너비 설정 */
+  max-width: 15000px; /* 박스의 최대 너비 설정 */
   width: 90%; /* 반응형을 위해 기본 너비 설정 */
   margin: 50px auto; /* 가운데 정렬 (상하 50px, 좌우 자동) */
   padding: 20px; /* 안쪽 여백 */
@@ -19,8 +19,14 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 */
   text-align: center; /* 텍스트 가운데 정렬 */
 }
+.box{
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+}
   
   /* 사이드바 스타일 */
+  
   .sidenav {
     height: 100%;
     width: 200px;
@@ -30,6 +36,7 @@
     left: 0;
     background-color: #111;
     overflow-x: hidden;
+    
   }
   
   /* 사이드바 링크 스타일 */
@@ -55,18 +62,23 @@
   }
   h2 {
     text-align: center;
-    color: #004D40; /* 짙은 teal 계열로 변경 */
+    color: #2755a5; /* 짙은 teal 계열로 변경 */
     background-color: #ECEFF1; /* 밝은 회색 (가독성 향상) */
     padding: 15px 20px; /* 내부 여백 확장 */
     display: block; /* 전체 너비 적용 */
     font-weight: bold; /* 글씨 강조 */
 }
+  h3{
+    color:#2755a5;
+    font-weight: bold; 
+
+  }
   /* 푸터 스타일 */
   footer {
     margin-left: 200px;
     text-align: center;
     padding: 3px;
-    background-color: teal;
+    background-color: #2755a5;
     color: white;
   }
 
@@ -89,12 +101,93 @@
   .lang-switch button:hover {
     transform: scale(1.2); /* 마우스 오버 시 확대 */
   }
+  .banner-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  .banner {
+    flex: 1;
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .banner-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  .banner-content {
+    padding: 20px;
+  }
+  .banner-content h3 {
+    margin: 0 0 10px;
+    color: #2755a5;
+  }
+  .banner-content p {
+    margin: 0;
+    color: #555;
+  }
+  .logo{
+    width: 400px;
+    height: auto;
+    margin-left: 100px;
+  }
+  button[type="submit"] {
+    background-color: #2755a5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #1e4385;
+    transform: scale(1.05);
+  }
+
+  button[type="submit"]:active {
+    background-color: #163366;
+    transform: scale(1);
+  }
+  .contact-box {
+    border: 2px solid #2755a5;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+
+  .contact-box h3 {
+    color: #2755a5;
+    margin-bottom: 10px;
+  }
+
+  .contact-box p {
+    margin: 5px 0;
+    line-height: 1.6;
+  }
 
   @media screen and (max-width: 768px) {
     .sidenav {
       width: 140px; /* 모바일에서 폭 줄이기 */
     }
-  
+    .logo{
+      width: 320px;
+      margin-left: 70px;
+    
+    }
     .content {
       margin-left: 150px; /* 본문도 조정 */
       padding: 7px;
@@ -103,20 +196,44 @@
     footer {
       margin-left: 140px;
     }
+    .banner-container {
+      flex-direction: column;
+      margin-left: 0; /* Remove sidenav margin for smaller screens */
+    }
+    .banner {
+      margin: 10px 0; /* Add spacing between banners */
+    }
+  
     
   }
   
   /* 📌 📱 더 작은 모바일 화면 (480px 이하) */
+
+
   @media screen and (max-width: 480px) {
     .sidenav {
-      width: 110px; /* 더 작은 화면에서는 더 줄이기 */
+      width: 110px; /* 모바일에서 폭 줄이기 */
     }
   
     .content {
-      margin-left: 120px;
+      margin-left: 120px; /* 본문도 조정 */
+      padding: 7px;
+    }
+    .logo{
+      width: 280px;
+      margin-left: 50px;
     }
   
     footer {
-      margin-left: 100px;
+      margin-left: 110px;
     }
+    .banner-container {
+      flex-direction: column;
+      margin-left: 0; /* Remove sidenav margin for smaller screens */
+    }
+    .banner {
+      margin: 10px 0; /* Add spacing between banners */
+    }
+  
+    
   }

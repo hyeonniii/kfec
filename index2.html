@@ -1,66 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Korean Forensic Experts & Consulting</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-
-
-<div id="sidenav" class="sidenav"></div>
-<script>
-  fetch('sidenav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('sidenav').innerHTML = data;
-
-      // 현재 페이지에 해당하는 링크에 스타일 추가
-      let links = document.querySelectorAll(".sidenav a");
-      links.forEach(link => {
-        if (link.href === window.location.href) {
-          link.style.color = "teal";  // 선택된 링크 강조
-          link.style.fontWeight = "bold"; 
-        }
-      });
-    });
-</script>
-  
-<div class="content">
-
-  
-      <h2>한국법과학원(KFEC)</h2>
-      <div class="content-box">
-      <!-- <img src="img4.jpg" alt="pppic" style="width:100%;max-width:600px;"> -->
-      <p class="mt-4 text-gray-700">
-        한국법과학원(KFEC)은 국립과학수사연구원에서 32년간 근무한 박남규(이학박사, 물리학)에 의해 2025년 4월 1일 설립되었습니다.       </p>
-      <p class="mt-4 text-gray-700">
-        한국법과학원은 다른 어느 기관보다 최고의 법과학/법공학 컨설팅 등의 서비스를 제공할 것이며, 전문성을 책임지는 박남규 박사는 화재, 안전사고 등 공학적 해석을 동반하는 현장과 증거물에 대하여 최고의 과학적인 전문 경험을 보유하고 있습니다.
-      </p>
-      <p class="mt-4 text-gray-700">
-        서비스는 국가 및 공공 기관, 각 전문 법인, 개인 등에 최대의 성실함으로 기여할 것입니다.
-        기여할 부분은 법과학/법공학적 감정과, 컨설팅, 법정 전문가 증언, 동 분야의 평가, 심사, 교육, 자문 등도 수행할 예정입니다.
-      </p>
-      <p class="mt-4 text-gray-700">
-        한국법과학원은 공공 및 민간 분야에 법과학, 법공학의 혜택을 제공하여 우리나라 법정과학의 발전에도 지속적으로 기여할 것입니다.
-
-      </p>
-    </div>
-</div>
-  
-<div id="footer"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
-</script>
+    
 </body>
 </html>
-
-

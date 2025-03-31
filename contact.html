@@ -8,9 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap" rel="stylesheet">
+
 </head>
 <body>
-
+  <div id="header"></div>
+  <script>
+    // JavaScript로 헤더 파일 로드
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+  </script>
 
 <div id="sidenav" class="sidenav"></div>
 <script>
@@ -23,7 +30,7 @@
       let links = document.querySelectorAll(".sidenav a");
       links.forEach(link => {
         if (link.href === window.location.href) {
-          link.style.color = "teal";  // 선택된 링크 강조
+          link.style.color = "#2755a5";  // 선택된 링크 강조
           link.style.fontWeight = "bold"; 
         }
       });
@@ -32,21 +39,68 @@
   
 
 <div class="content">
-  <h2>Contact</h2>
-  <p>사무실번호는 02-6954-1337 </p>
-  <P>웬만하면 메일하세요 dr.park@kfec.co.kr</P>
-  <p>심심하시면 사무실오세요. 청량리역6번출구</p>
-<img src="img2.jpg" alt="mainpic" style="width:100%;max-width:600px;">
+
+  <p> 서비스 의뢰와 관련된 문의는 아래 폼을 작성해 주시거나, 아래 기재된 전화와 메일로 연락바랍니다. </p>
+  <div class="contact-box">
+
+    <div>
+    <form action="https://formsubmit.co/info@kfec.co.kr" method="POST">
+      <p><label for="name">이름:</label>
+      <input type="text" id="name" name="name" required></p>
+      <p><label for="phone">전화번호:</label>
+      <input type="phone" id="phone" name="phone" required>
+      </p>
+      <p>
+      <label for="email">이메일:</label>
+      <input type="email" id="email" name="email" required>
+      </p><p>
+      <label for="message">메시지:</label>
+      <textarea id="message" name="message" required></textarea></p>
+      <style>
+
+      </style>
+      <button type="submit">보내기</button>
+    
+  </div>
+
+</form>
 </div>
-<div id="footer"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
+
+  <P> 📞 02-6954-1337 </p>
+    <p>📧dr.park@kfec.co.kr</P>
+  <h3>찾아오시는 길</h3>
+  <p>📍서울특별시 동대문구 고산자로 34길 70 해링턴플레이스 B동 337호</p>
+  <!-- * 카카오맵 - 지도퍼가기 -->
+<!-- 1. 지도 노드 -->
+<div id="daumRoughmapContainer1743405700635" class="root_daum_roughmap root_daum_roughmap_landing map"></div>
+
+<!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+<!-- 3. 실행 스크립트 -->
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp" : "1743405700635",
+		"key" : "2nikn",
+		"mapWidth" : "640",
+		"mapHeight" : "360"
+	}).render();
 </script>
+</div>
+</div>
 
 
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  
 </body>
 </html>
