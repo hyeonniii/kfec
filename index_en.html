@@ -10,10 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="en">
 
 
-<div id="sidenav" class="sidenav"></div>
+<div id="sidenav" class="sidenav">
 <script>
   fetch('sidenav_en.html')
     .then(response => response.text())
@@ -30,38 +30,12 @@
       });
     });
 </script>
-
+</div>
+<div class="content">
+<div class="content-box">
 <iframe src="english.pdf" width="100%" height="600px"></iframe>
-<!-- <div class="content">
-
-  
-      <h2>Korean Forensic Experts & Consulting(KFEC)</h2>
-      <p class="mt-4 text-gray-700">
-        Korean Forensic Experts & Consulting (KFEC) was founded in April 2025 by Dr. Namkyu Park, who holds advanced degrees in physics and served as a forensic scientist and president at the National Forensic Service (NFS) of Korea for 32 years.
-      </p>
-      <p class="mt-4 text-gray-700">
-        KFEC offers premier sevices like no other.
-        Experts of KFEC have premier experience like no other.
-        Dr.Park is recognized by the courts as an expert witness and analyst. He has the best experience in the field of forensic science and engineering in the past decades.
-      </p>
-      <p class="mt-4 text-gray-700">
-        KFEC’s sincerity will impress clients, national and public organizations, each group, private as carrying out forensic science and engineering consulting services, expert witness in court, assessment, examination, training, advice.
-      </p>
-      <p class="mt-4 text-gray-700">
-        KFEC’s ultimate goal is to contributing to the progress of forensic science including forensic engineering in korea by offering forensic services.
-      </p>
-</div>-->
-  
-<div id="footer"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
-</script>
-
-
+</div>
+</div>
 </body>
 </html>
 

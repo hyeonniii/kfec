@@ -10,7 +10,7 @@
     font-style: normal;
 }
 .content-box {
-  max-width: 15000px; /* 박스의 최대 너비 설정 */
+  max-width: 1500px; /* 박스의 최대 너비 설정 */
   width: 90%; /* 반응형을 위해 기본 너비 설정 */
   margin: 50px auto; /* 가운데 정렬 (상하 50px, 좌우 자동) */
   padding: 20px; /* 안쪽 여백 */
@@ -238,3 +238,21 @@
   
     
   }
+
+  body.en footer{
+    display: none;
+  }
+
+  body.en .content-box{
+    margin-bottom: 0;
+  }
+
+  body.en {
+    min-height: auto;
+  }
+
+  body.en iframe{
+    display: block;
+    height:  90vh;
+  }
+
