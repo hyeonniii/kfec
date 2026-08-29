@@ -201,8 +201,7 @@
     }
     .logo{
       width: 320px;
-      margin-left: 70px;
-
+      margin: 0 auto; /* 고정 사이드바가 없어진 모바일에서는 가운데 정렬 */
     }
     .content {
       margin-left: 0; /* 사이드바가 더 이상 고정폭을 차지하지 않으므로 여백 제거 */
@@ -233,7 +232,7 @@
     }
     .logo{
       width: 280px;
-      margin-left: 50px;
+      margin: 0 auto;
     }
     .content {
       padding: 7px;
