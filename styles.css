@@ -181,21 +181,36 @@
   }
 
   @media screen and (max-width: 768px) {
+    /* 고정 좌측 사이드바 대신 상단에 놓이는 가로 메뉴바로 전환 */
     .sidenav {
-      width: 140px; /* 모바일에서 폭 줄이기 */
+      position: static;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .sidenav a {
+      padding: 10px 12px;
+    }
+    .lang-switch {
+      width: 100%;
+      padding: 6px 0;
     }
     .logo{
       width: 320px;
       margin-left: 70px;
-    
+
     }
     .content {
-      margin-left: 150px; /* 본문도 조정 */
+      margin-left: 0; /* 사이드바가 더 이상 고정폭을 차지하지 않으므로 여백 제거 */
       padding: 7px;
     }
-  
+
     footer {
-      margin-left: 140px;
+      margin-left: 0;
     }
     .banner-container {
       flex-direction: column;
@@ -204,29 +219,24 @@
     .banner {
       margin: 10px 0; /* Add spacing between banners */
     }
-  
-    
+
+
   }
-  
+
   /* 📌 📱 더 작은 모바일 화면 (480px 이하) */
 
 
   @media screen and (max-width: 480px) {
-    .sidenav {
-      width: 110px; /* 모바일에서 폭 줄이기 */
-    }
-  
-    .content {
-      margin-left: 120px; /* 본문도 조정 */
-      padding: 7px;
+    .sidenav a {
+      padding: 8px 10px;
+      font-size: 14px;
     }
     .logo{
       width: 280px;
       margin-left: 50px;
     }
-  
-    footer {
-      margin-left: 110px;
+    .content {
+      padding: 7px;
     }
     .banner-container {
       flex-direction: column;
@@ -235,24 +245,76 @@
     .banner {
       margin: 10px 0; /* Add spacing between banners */
     }
-  
-    
+
+
   }
 
-  body.en footer{
-    display: none;
+  .profile-box .title-line {
+    color: #555;
+    font-weight: 500;
   }
 
-  body.en .content-box{
-    margin-bottom: 0;
+  /* 객원 연구위원 카드 */
+  .researcher-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-
-  body.en {
-    min-height: auto;
+  .researcher-photo-wrap {
+    width: 120px;
+    height: 160px; /* 증명사진 비율(3:4) */
+    flex-shrink: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #eee; /* 사진 파일이 없을 때 보이는 빈 자리 */
+    overflow: hidden;
   }
-
-  body.en iframe{
+  .researcher-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    height:  90vh;
+  }
+  .researcher-info h3 {
+    margin: 0 0 6px;
+    color: #2755a5;
+  }
+  .researcher-field {
+    margin: 0 0 10px;
+    color: #2755a5;
+    font-weight: 600;
+  }
+  .researcher-bio {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* 전문가 약력 페이지 상단 프로필: .box 안에 얹혀서 아래 이어지는 내용과
+     같은 흰색 배경을 공유하고, 구분선으로만 살짝 나눔 */
+  .profile-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  @media screen and (max-width: 768px) {
+    .researcher-card,
+    .profile-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 

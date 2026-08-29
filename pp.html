@@ -37,7 +37,20 @@
 
 <div class="content">
 
-  <div class="box"> 
+  <div class="box">
+  <!-- 대표 프로필 사진: profile.jpg 파일을 이 폴더(루트)에 넣으면 표시됩니다.
+       파일이 없으면 지금처럼 빈 회색 박스로 보입니다. -->
+  <div class="profile-header">
+    <div class="researcher-photo-wrap">
+      <img src="profile.png" alt="사진" class="researcher-photo"
+           onerror="this.style.display='none'">
+    </div>
+    <div class="researcher-info">
+      <h3>박남규</h3>
+      <p class="researcher-field">이학박사(물리학) · 한국법과학원 대표</p>
+    </div>
+  </div>
+
   <h3>🎓 학력</h3>
 
   <ul>

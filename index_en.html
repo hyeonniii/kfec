@@ -10,8 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap" rel="stylesheet">
 
 </head>
-<body class="en">
-
+<body>
+<div id="header"></div>
+<script>
+  // JavaScript로 헤더 파일 로드
+  fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+</script>
 
 <div id="sidenav" class="sidenav">
 <script>
@@ -25,18 +31,48 @@
       links.forEach(link => {
         if (link.href === window.location.href) {
           link.style.color = "teal";  // 선택된 링크 강조
-          link.style.fontWeight = "bold"; 
+          link.style.fontWeight = "bold";
         }
       });
     });
 </script>
 </div>
 <div class="content">
-<div class="content-box">
-<iframe src="english.pdf" width="100%" height="600px"></iframe>
+
+  <div class="box profile-box">
+    <h3>👨‍🔬 Nam-Kyu PARK</h3>
+    <p class="title-line">Forensic Scientist &nbsp;|&nbsp; Forensic Engineer &nbsp;|&nbsp; Forensic Fire Investigator</p>
+  </div>
+
+  <div class="box">
+    <h3>🔍 Areas of Expertise</h3>
+    <ul>
+      <li>Fire Incident Reconstruction</li>
+      <li>Investigation of failure of structure, machine, component, material</li>
+      <li>Analysis of physical evidences for resolving the cause of incidences or events</li>
+      <li>Providing expert documentation that can be used in legal proceedings</li>
+      <li>Giving expert testimony on scientific opinion in civil and criminal trials</li>
+      <li>Supporting foreign expert organizations in forensic activities in Korea</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h3>📇 Contact</h3>
+    <p><b>Homepage</b> &nbsp;<a href="https://kfec.co.kr">https://kfec.co.kr</a></p>
+    <p><b>Address</b> &nbsp;Harrington Place 3rd Floor B-337, 70 Gosanja-ro 34-gil, Dongdaemun-gu, Seoul, Republic of Korea</p>
+    <p><b>E-mail</b> &nbsp;<a href="mailto:Dr.park@kfec.co.kr">Dr.park@kfec.co.kr</a></p>
+    <p><b>TEL</b> &nbsp;+82-2-6954-1337 &nbsp;/&nbsp; +82-10-3560-6436</p>
+  </div>
+
 </div>
-</div>
+
+<div id="footer"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
 </body>
 </html>
-
-

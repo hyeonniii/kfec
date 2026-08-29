@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Korean Forensic Experts & Consulting</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="header"></div>
+<script>
+  // JavaScript로 헤더 파일 로드
+  fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+</script>
+
+<div id="sidenav" class="sidenav"></div>
+<script>
+  fetch('sidenav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('sidenav').innerHTML = data;
+
+      // 현재 페이지에 해당하는 링크에 스타일 추가
+      let links = document.querySelectorAll(".sidenav a");
+      links.forEach(link => {
+        if (link.href === window.location.href) {
+          link.style.color = "#2755a5";  // 선택된 링크 강조
+          link.style.fontWeight = "bold";
+        }
+      });
+    });
+</script>
+
+<div class="content">
+
+  <!--
+    객원 연구위원 카드 - 아래 <div class="researcher-card"> 블록 하나가 한 분입니다.
+    인원수만큼 이 블록 전체를 복사/붙여넣기 하고, 아래 항목만 채워 넣으세요.
+
+      1) 사진: src="researcher1.jpg" 처럼 researcher + 번호 이름으로 파일을 이 폴더(루트)에
+         넣어주세요. (researcher1.jpg, researcher2.jpg, researcher3.jpg ...)
+         파일이 아직 없으면 그냥 두세요 - 사진 자리가 빈 회색 박스로 표시됩니다.
+      2) 이름 / 분야 / 약력 텍스트만 바꿔서 채우면 됩니다.
+  -->
+
+  <div class="researcher-card">
+    <div class="researcher-photo-wrap">
+      <img src="researcher1.png" alt="사진" class="researcher-photo"
+           onerror="this.style.display='none'">
+    </div>
+    <div class="researcher-info">
+      <h3>민승식</h3>
+      <p class="researcher-field">전문분야: 식품</p>
+      <p class="researcher-bio">
+        국립과학수사연구원 제주분원장<br>
+        국립과학수사연구원 식품연구실장<br>
+        연세대학교대학원 식품생물공학과 석사<br>
+      </p>
+    </div>
+  </div>
+
+  <div class="researcher-card">
+    <div class="researcher-photo-wrap">
+      <img src="researcher2.png" alt="사진" class="researcher-photo"
+           onerror="this.style.display='none'">
+    </div>
+    <div class="researcher-info">
+      <h3>주은아</h3>
+      <p class="researcher-field">전문분야: 물리학</p>
+      <p class="researcher-bio">
+        미국 국립표준기술연구소(NIST) 방문연구원<br>
+        국립과학수사연구원 흔적연구실 연구원<br>
+        연세대학교대학원 응용물리학과 박사<br>
+        고려대학교 물리학과 학사/석사<br>
+      </p>
+    </div>
+  </div>
+
+  <div class="researcher-card">
+    <div class="researcher-photo-wrap">
+      <img src="researcher3.png" alt="사진" class="researcher-photo"
+           onerror="this.style.display='none'">
+    </div>
+    <div class="researcher-info">
+      <h3>김한수</h3>
+      <p class="researcher-field">전문분야: 디지털포렌식</p>
+      <p class="researcher-bio">
+        한림대학교 교수<br>
+        국립과학수사연구원 디지털분석과<br>
+        LG전자 주임연구원<br>
+        서강대학교 전자공학과 학/석/박사<br>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="researcher-card">
+    <div class="researcher-photo-wrap">
+      <img src="researcher4.png" alt="사진" class="researcher-photo"
+           onerror="this.style.display='none'">
+    </div>
+    <div class="researcher-info">
+      <h3>김동환</h3>
+      <p class="researcher-field">전문분야: 총기/폭발/안전</p>
+      <p class="researcher-bio">
+        국방부 과학수사연구소 총기폭발과장<br>
+        국립과학수사연구원 총기연구실장<br>
+        공학석사, 화학공학 <br>
+      </p>
+    </div>
+  </div>
+
+</div>
+</div>
+<div id="footer"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+</body>
+</html>
